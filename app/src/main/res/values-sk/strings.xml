@@ -1,0 +1,59 @@
+<resources>
+    <string name="action_help">Pomocník</string>
+    <string-array name="viewpager_titles">
+        <item>Priorita</item>
+        <item>Viditeľnosť</item>
+    </string-array>
+
+    <!-- Item view -->
+    <string name="status_not_modified">Nezmenené</string>
+    <string name="status_priority_default">Predvolená</string>
+    <string name="status_priority_high">Vysoká</string>
+    <string name="status_priority_low">Nízka</string>
+    <string name="status_priority_max">Maximálna</string>
+    <string name="status_priority_min">Minimálna</string>
+    <string name="status_visibility_private">Súkromná</string>
+    <string name="status_visibility_public">Verejná</string>
+    <string name="status_visibility_secret">Tajná</string>
+
+    <!-- alert -->
+    <string name="priority_dialog_title">Zvoľte prioritu</string>
+    <string name="visibility_dialog_title">Zvoľte viditeľnosť</string>
+    <string-array name="priority_choose_items">
+        <item>Nezmenená</item>
+        <item>Maxmálna</item>
+        <item>Vysoká</item>
+        <item>Predvolená</item>
+        <item>Nízka</item>
+        <item>Minmálna</item>
+    </string-array>
+    <string-array name="visibility_choose_items">
+        <item>Nezmenená</item>
+        <item>Súkromná</item>
+        <item>Verejná</item>
+        <item>Tajná</item>
+    </string-array>
+
+    <string name="title_activity_help">Pomocník</string>
+    <string name="help_priority_title">Priorita</string>
+    <string name="help_priority_description">
+        Priorita rozhoduje o pozícii upozornenia v oblasti s upozorneniami.
+        Vyskakovacie upozornenia musí mať vysokú alebo maximálnu prioritu.
+        Upozornenia s minimálnou prioritou sa nezobrazujú v stavovom riadku.
+    </string>
+    <string name="help_priority_low_title">Nízka/string>
+    <string name="help_priority_min_title">Minimálna</string>
+    <string name="help_visibility_title">Viditeľnosť</string>
+    <string name="help_visibility_description">
+        Viditeľnosť ovplyvňuje to, ako a kedy systém zobrazí upozornenia
+        a ich obsahu na zabezpečenej obrazovke uzamknutia. Súkromná viditeľnosť
+        je predvolená a pri ktorej sa zobrazí len nadpis na obrazovke uzamknutia.
+        Pri verejnej viditeľnosť sa zobrazí celý obsah upozornenia a pri tajnej
+        viditeľnosti sa nezobrazí nič. To sa prejaví iba v prípade, keď je nastavenie
+        Keď je zariadenie uzamknuté nastavené na Skryť citlivý obsah upozornení v
+        nastaveniach Zvuky a upozornenia.
+    </string>
+    <string name="help_visibility_private_title">Súkromná</string>
+    <string name="help_visibility_public_title">Verejná</string>
+    <string name="help_visibility_secret_title">Tajná</string>
+</resources>
