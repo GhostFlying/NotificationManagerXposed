@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Notification Manager</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_help">Help</string>
+    <string-array name="viewpager_titles">
+        <item>Priority</item>
+        <item>Visibility</item>
+    </string-array>
+
+    <!-- Item view -->
+    <string name="default_app_name">@string/app_name</string>
+    <string name="default_modification_status">@string/status_not_modified</string>
+    <string name="status_not_modified">not modified</string>
+    <string name="status_priority_default">Default</string>
+    <string name="status_priority_high">High</string>
+    <string name="status_priority_low">Low</string>
+    <string name="status_priority_max">Max</string>
+    <string name="status_priority_min">Min</string>
+    <string name="status_visibility_private">Private</string>
+    <string name="status_visibility_public">Public</string>
+    <string name="status_visibility_secret">Secret</string>
+
+    <!-- alert -->
+    <string name="positive_button">@android:string/ok</string>
+    <string name="negative_button">@android:string/cancel</string>
+    <string name="priority_dialog_title">Choose priority</string>
+    <string name="visibility_dialog_title">Choose visibility</string>
+    <string-array name="priority_choose_items">
+        <item>Unmodified</item>
+        <item>Max</item>
+        <item>High</item>
+        <item>Default</item>
+        <item>Low</item>
+        <item>Min</item>
+    </string-array>
+    <string-array name="visibility_choose_items">
+        <item>UnModified</item>
+        <item>Private</item>
+        <item>Public</item>
+        <item>Secret</item>
+    </string-array>
+
+    <string name="title_activity_help">Help</string>
+    <string name="help_priority_title">Priority</string>
+    <string name="help_priority_description">
+        Priority decides the position of notification in the notification area.
+        Heads-up notification needs HIGH or MAX and ones have Min priority
+        do not display on the status bar.
+    </string>
+    <string name="help_priority_low_title">Low</string>
+    <string name="help_priority_min_title">Min</string>
+    <string name="help_visibility_title">Visibility</string>
+    <string name="help_visibility_description">
+        Visibility affects how and when the SystemUI reveals the notification\'s
+        presence and contents on the secure lockscreen. Private is default and only show
+        title in the lockscreen, public show all content and secret do not show any.
+        This will take effect only if the setting When device is locked is set to hide sensitive
+        notification content in Sound &amp; notification.
+    </string>
+    <string name="help_visibility_private_title">Private</string>
+    <string name="help_visibility_public_title">Public</string>
+    <string name="help_visibility_secret_title">Secret</string>
+</resources>
