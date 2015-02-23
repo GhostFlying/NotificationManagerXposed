@@ -3,6 +3,7 @@
     <string-array name="viewpager_titles">
         <item>Priorita</item>
         <item>Viditeľnosť</item>
+        <item>Vibrovať</item>
     </string-array>
 
     <!-- Item view -->
@@ -33,6 +34,12 @@
         <item>Verejná</item>
         <item>Tajná</item>
     </string-array>
+    <string-array name="vibrate_choose_items">
+        <item>Nezmenená</item>
+        <item>Umožniť</item>
+        <item>Zakázať</item>
+        <item>Tichý</item>
+    </string-array>
 
     <string name="title_activity_help">Pomocník</string>
     <string name="help_priority_title">Priorita</string>
@@ -41,7 +48,7 @@
         Vyskakovacie upozornenia musí mať vysokú alebo maximálnu prioritu.
         Upozornenia s minimálnou prioritou sa nezobrazujú v stavovom riadku.
     </string>
-    <string name="help_priority_low_title">Nízka/string>
+    <string name="help_priority_low_title">Nízka</string>
     <string name="help_priority_min_title">Minimálna</string>
     <string name="help_visibility_title">Viditeľnosť</string>
     <string name="help_visibility_description">
@@ -56,4 +63,8 @@
     <string name="help_visibility_private_title">Súkromná</string>
     <string name="help_visibility_public_title">Verejná</string>
     <string name="help_visibility_secret_title">Tajná</string>
+    <string name="status_vibrate_disable">Zakázať</string>
+    <string name="status_vibrate_enable">Umožniť</string>
+    <string name="status_vibrate_silent">Tichý</string>
+    <string name="vibrate_dialog_title">Vyberte si vibrovať</string>
 </resources>

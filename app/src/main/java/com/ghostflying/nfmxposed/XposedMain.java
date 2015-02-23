@@ -21,17 +21,36 @@ public class XposedMain implements IXposedHookLoadPackage{
 
         String priorityPreName = loadPackageParam.packageName + PreferencesUtil.PRIORITY_PREFERENCES_POSTFIX;
         String visibilityPreName = loadPackageParam.packageName + PreferencesUtil.VISIBILITY_PREFERENCES_POSTFIX;
+        String vibratePreName = loadPackageParam.packageName + PreferencesUtil.VIBRATE_PREFERENCES_POSTFIX;
 
-        if (pre.contains(priorityPreName) || pre.contains(visibilityPreName)){
-            final int setPriority = pre.getInt(priorityPreName, Notification.PRIORITY_DEFAULT);
-            final int setVisibility = pre.getInt(visibilityPreName, Notification.VISIBILITY_PRIVATE);
+        if (pre.contains(priorityPreName) || pre.contains(visibilityPreName) || pre.contains(vibratePreName)){
+            final int setPriority = pre.getInt(priorityPreName, PreferencesUtil.DEFAULT_PRIORITY);
+            final int setVisibility = pre.getInt(visibilityPreName, PreferencesUtil.DEFAULT_VISIBILITY);
+            final int setVibrate = pre.getInt(vibratePreName, PreferencesUtil.DEFAULT_VIBRATE);
             try{
                 findAndHookMethod("android.app.NotificationManager", loadPackageParam.classLoader, "notify", String.class, int.class, Notification.class , new XC_MethodHook() {
                     @Override
                     protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
                         super.beforeHookedMethod(param);
-                        ((Notification)param.args[2]).priority = setPriority;
-                        ((Notification)param.args[2]).visibility = setVisibility;
+                        if (setPriority != PreferencesUtil.DEFAULT_PRIORITY)
+                            ((Notification)param.args[2]).priority = setPriority;
+                        if (setVisibility != PreferencesUtil.DEFAULT_VISIBILITY)
+                            ((Notification)param.args[2]).visibility = setVisibility;
+                        if (setVibrate != PreferencesUtil.DEFAULT_VIBRATE){
+                            Notification mNotification = ((Notification)param.args[2]);
+                            switch (setVibrate){
+                                case PreferencesUtil.VIBRATE_ENABLE:
+                                    mNotification.defaults |= Notification.DEFAULT_VIBRATE;
+                                    break;
+                                case PreferencesUtil.VIBRATE_SILENT:
+                                    mNotification.defaults &= ~Notification.DEFAULT_VIBRATE;
+                                    mNotification.vibrate = PreferencesUtil.VIBRATE_SILENT_PATTERN;
+                                    break;
+                                case PreferencesUtil.VIBRATE_DISABLE:
+                                    mNotification.defaults &= ~Notification.DEFAULT_VIBRATE;
+                                    mNotification.vibrate = null;
+                            }
+                        }
                     }
                 });
             }

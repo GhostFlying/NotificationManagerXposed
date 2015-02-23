@@ -1,16 +1,17 @@
 <resources>
-    <string name="app_name">Notification Manager</string>
+    <string name="app_name" translatable="false">Notification Manager</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world" translatable="false">Hello world!</string>
     <string name="action_help">Help</string>
     <string-array name="viewpager_titles">
         <item>Priority</item>
         <item>Visibility</item>
+        <item>Vibrate</item>
     </string-array>
 
     <!-- Item view -->
-    <string name="default_app_name">@string/app_name</string>
-    <string name="default_modification_status">@string/status_not_modified</string>
+    <string name="default_app_name" translatable="false">@string/app_name</string>
+    <string name="default_modification_status" translatable="false">@string/status_not_modified</string>
     <string name="status_not_modified">not modified</string>
     <string name="status_priority_default">Default</string>
     <string name="status_priority_high">High</string>
@@ -20,12 +21,16 @@
     <string name="status_visibility_private">Private</string>
     <string name="status_visibility_public">Public</string>
     <string name="status_visibility_secret">Secret</string>
+    <string name="status_vibrate_enable">Enable</string>
+    <string name="status_vibrate_disable">Disable</string>
+    <string name="status_vibrate_silent">Silent</string>
 
     <!-- alert -->
-    <string name="positive_button">@android:string/ok</string>
-    <string name="negative_button">@android:string/cancel</string>
+    <string name="positive_button" translatable="false">@android:string/ok</string>
+    <string name="negative_button" translatable="false">@android:string/cancel</string>
     <string name="priority_dialog_title">Choose priority</string>
     <string name="visibility_dialog_title">Choose visibility</string>
+    <string name="vibrate_dialog_title">Choose vibrate</string>
     <string-array name="priority_choose_items">
         <item>Unmodified</item>
         <item>Max</item>
@@ -39,6 +44,12 @@
         <item>Private</item>
         <item>Public</item>
         <item>Secret</item>
+    </string-array>
+    <string-array name="vibrate_choose_items">
+        <item>Unmodified</item>
+        <item>Enable</item>
+        <item>Disable</item>
+        <item>Silent</item>
     </string-array>
 
     <string name="title_activity_help">Help</string>

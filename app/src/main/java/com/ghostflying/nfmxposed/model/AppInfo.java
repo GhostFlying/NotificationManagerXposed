@@ -60,6 +60,19 @@ public class AppInfo {
         }
     }
 
+    public int getVibrate(){
+        return mPreferences.getInt(mPackageName + PreferencesUtil.VIBRATE_PREFERENCES_POSTFIX, PreferencesUtil.DEFAULT_VIBRATE);
+    }
+
+    public void setVibrate(int vibrate){
+        if (vibrate == PreferencesUtil.DEFAULT_VIBRATE){
+            mPreferences.edit().remove(mPackageName + PreferencesUtil.VIBRATE_PREFERENCES_POSTFIX).apply();
+        }
+        else {
+            mPreferences.edit().putInt(mPackageName + PreferencesUtil.VIBRATE_PREFERENCES_POSTFIX, vibrate).apply();
+        }
+    }
+
     public boolean isRestricted(){
         return mPreferences.contains(mPackageName + PreferencesUtil.PRIORITY_PREFERENCES_POSTFIX)
                 || mPreferences.contains(mPackageName + PreferencesUtil.VISIBILITY_PREFERENCES_POSTFIX);
@@ -71,5 +84,9 @@ public class AppInfo {
 
     public boolean isVisibilityRestricted(){
         return mPreferences.contains(mPackageName + PreferencesUtil.VISIBILITY_PREFERENCES_POSTFIX);
+    }
+
+    public boolean isVibrateRestricted(){
+        return mPreferences.contains(mPackageName + PreferencesUtil.VIBRATE_PREFERENCES_POSTFIX);
     }
 }

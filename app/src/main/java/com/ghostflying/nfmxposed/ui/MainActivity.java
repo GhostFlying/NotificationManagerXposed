@@ -17,7 +17,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 public class MainActivity extends Activity{
-    private static final int NUM_PAGES = 2;
+    private static final int NUM_PAGES = 3;
 
     private String[] pageTitles;
     private FragmentPagerAdapter mPagerAdapter;
@@ -74,11 +74,14 @@ public class MainActivity extends Activity{
 
         @Override
         public Fragment getItem(int position) {
-            if (position == 0){
-                return PriorityFragment.newInstance();
-            }
-            else {
-                return VisibilityFragment.newInstance();
+            switch (position){
+                case 0:
+                    return PriorityFragment.newInstance();
+                case 1:
+                    return VisibilityFragment.newInstance();
+                case 2:
+                default:
+                    return VibrateFragment.newInstance();
             }
         }
 
