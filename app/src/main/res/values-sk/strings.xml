@@ -67,4 +67,5 @@
     <string name="status_vibrate_enable">Umožniť</string>
     <string name="status_vibrate_silent">Tichý</string>
     <string name="vibrate_dialog_title">Vyberte si vibrovať</string>
+    <string name="help_vibrate_title">Vibrovať</string>
 </resources>
