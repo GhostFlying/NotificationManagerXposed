@@ -10,6 +10,8 @@ import com.ghostflying.nfmxposed.model.AppInfo;
 import com.ghostflying.nfmxposed.util.PreferencesUtil;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -33,9 +35,24 @@ public abstract class BaseAppInfoLoader extends AsyncTaskLoader<List<AppInfo>> {
         for (ApplicationInfo each : launchApps){
             apps.add(new AppInfo(each, manager, mPreferences));
         }
-        sortApps(apps);
+        Collections.sort(apps, new Comparator<AppInfo>() {
+            @Override
+            public int compare(AppInfo lhs, AppInfo rhs) {
+                if (isRestricted(lhs) && !isRestricted(rhs)){
+                    return -1;
+                }
+                else if (!isRestricted(lhs) && isRestricted(rhs)){
+                    return 1;
+                }
+                else {
+                    return lhs.getAppName().compareTo(rhs.getAppName());
+                }
+            }
+        });
         return apps;
     }
+
+    protected abstract boolean isRestricted(AppInfo info);
 
     private List<ApplicationInfo> checkForLaunchIntent(List<ApplicationInfo> list, PackageManager packageManager) {
         ArrayList<ApplicationInfo> appList = new ArrayList<ApplicationInfo>();
@@ -51,8 +68,6 @@ public abstract class BaseAppInfoLoader extends AsyncTaskLoader<List<AppInfo>> {
 
         return appList;
     }
-
-    protected abstract void sortApps(List<AppInfo> apps);
 
     @Override
     public void deliverResult(List<AppInfo> apps){
