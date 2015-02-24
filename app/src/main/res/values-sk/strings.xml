@@ -3,7 +3,7 @@
     <string-array name="viewpager_titles">
         <item>Priorita</item>
         <item>Viditeľnosť</item>
-        <item>Vibrovať</item>
+        <item>Vibrácie</item>
     </string-array>
 
     <!-- Item view -->
@@ -26,7 +26,7 @@
         <item>Vysoká</item>
         <item>Predvolená</item>
         <item>Nízka</item>
-        <item>Minmálna</item>
+        <item>Minimálna</item>
     </string-array>
     <string-array name="visibility_choose_items">
         <item>Nezmenená</item>
@@ -35,10 +35,10 @@
         <item>Tajná</item>
     </string-array>
     <string-array name="vibrate_choose_items">
-        <item>Nezmenená</item>
-        <item>Umožniť</item>
+        <item>Nezmenené</item>
+        <item>Povoliť</item>
         <item>Zakázať</item>
-        <item>Tichý</item>
+        <item>Tiché</item>
     </string-array>
 
     <string name="title_activity_help">Pomocník</string>
@@ -66,6 +66,13 @@
     <string name="status_vibrate_disable">Zakázať</string>
     <string name="status_vibrate_enable">Umožniť</string>
     <string name="status_vibrate_silent">Tichý</string>
-    <string name="vibrate_dialog_title">Vyberte si vibrovať</string>
-    <string name="help_vibrate_title">Vibrovať</string>
+    <string name="vibrate_dialog_title">Vyberte vibrácie</string>
+    <string name="help_vibrate_title">Vibrácie</string>
+    <string name="help_vibrate_description" >
+        Vibrácie ovplyvňujú to, kedy sa zobrazenia upozornenia a taktiež ovplyvňujú
+        vyskakovacie upozornenia. Povolenie a zakázanie režimu je zrejmé a tichý režim
+        nie je oficiálne podporovaný. Môže vyvolať vyskakovacie upozornenia, ale vôbec
+        nemusí dôjsť k vibráciám.\n\nUPOZORNENIE: U aplikácií, ktoré nemajú povolenie na
+        vibrácie, môže dôjsť k pádu, ak pridáte vibrácie na niektorých zariadeniach.
+    </string>
 </resources>
