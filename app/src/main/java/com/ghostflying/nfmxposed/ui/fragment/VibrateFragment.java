@@ -1,4 +1,4 @@
-package com.ghostflying.nfmxposed.ui;
+package com.ghostflying.nfmxposed.ui.fragment;
 
 import android.app.DialogFragment;
 import android.content.Loader;

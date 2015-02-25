@@ -12,6 +12,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.ghostflying.nfmxposed.R;
+import com.ghostflying.nfmxposed.ui.fragment.PriorityFragment;
+import com.ghostflying.nfmxposed.ui.fragment.VibrateFragment;
+import com.ghostflying.nfmxposed.ui.fragment.VisibilityFragment;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;

@@ -1,4 +1,4 @@
-package com.ghostflying.nfmxposed.ui;
+package com.ghostflying.nfmxposed.ui.fragment;
 
 import android.app.Activity;
 import android.app.Fragment;
