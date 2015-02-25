@@ -73,7 +73,7 @@
     <string name="help_visibility_public_title">Public</string>
     <string name="help_visibility_secret_title">Secret</string>
     <string name="help_vibrate_title">Vibrate</string>
-    <string name="help_vibrate_description" translatable="false">
+    <string name="help_vibrate_description">
         Vibrate affects the vibrate when the notification appears, and it also will affect the
         heads-up notification. Enable and disable mode is obvious and the silent mode is one
         "hack" mode, it can trigger heads-up but do not vibrate at all.\n\n
